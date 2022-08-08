@@ -2,7 +2,7 @@ import random
 import os
 
 
-def read_data(filepath="./archivos/data.txt"):
+def read_data(filepath="./data.txt"):
     words = []
     with open(filepath, "r", encoding="utf-8") as f:
         for line in f:
@@ -11,7 +11,7 @@ def read_data(filepath="./archivos/data.txt"):
 
 
 def run():
-    data = read_data(filepath="./archivos/data.txt")
+    data = read_data(filepath="./data.txt")
     chosen_word = random.choice(data)
     chosen_word_list = [letter for letter in chosen_word]
     chosen_word_list_underscores = ["_"] * len(chosen_word_list)
