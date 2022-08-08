@@ -10,8 +10,10 @@ class Read:
     ind = random.randrange(0,172)
     word =""
     word = words[ind]
+    word_dict = dict(enumerate(word))
 
-    def __init__(self, words, word):
+    def __init__(self, words, word, word_dict):
         self.words = words
         self.word = word
+        self.word_dict = word_dict
         

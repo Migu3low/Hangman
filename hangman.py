@@ -11,6 +11,7 @@ class Logic:
         else:
             list.append("")
     dict = dict(enumerate(list))
+    
 
     print(f"""
     Adivina la palabra
@@ -29,18 +30,25 @@ if __name__=='__main__':
     Start
     Logic
 
-    word =  {0:"M", 1:"A", 2:"S", 3:"T", 4:"I", 5:"L"}
-    letter =  "S"
-    dict = {0:"", 1:"", 2:"", 3:"", 4:"", 5:"L"}
-    key = 0
-    for x in word.values():
-        if x in letter:
-                dict[key] = x
+    
+
+    verify = list(Logic.dict.values())
+    while verify.count("") != 0:
+        print(verify)
+        Start.letter = input("Ingresa una letra: ")
+        Start.letter = Start.letter.upper()
+
+        key = 0
+        for x in Read.word_dict.values():
+            verify = list(Logic.dict.values())
+            if x in Start.letter:
+                Logic.dict[key] = x
                 key += 1
-        else:
+            else:
                 key += 1
-	
-	
-print(dict)
+        
+    else:
+        print(verify)
+
 
 
